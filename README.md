@@ -4,11 +4,11 @@
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](./LICENSE)
 
 
-> **TL;DR:** We introduce Traffic-VQA, the first large-scale optical-thermal infrared (OPT-TIR) benchmark for UAV traffic understanding, and propose CTCNet, a novel Cross-spectral Traffic Cognition Network for robust all-weather traffic scene perception and congnition understanding.
+> **TL;DR:** We introduce Traffic-VQA, the first large-scale optical-thermal infrared (OPT-TIR) benchmark for UAV traffic understanding, and propose MTCNet, a novel Cross-spectral Traffic Cognition Network for robust all-weather traffic scene perception and congnition understanding.
 
 ---
 
-Traffic scene understanding from Unmanned Aerial Vehicle (UAV) platforms plays a critical role in intelligent transportation systems due to its flexible deployment and wide-area monitoring capabilities. However, existing methods still face significant challenges in real-world traffic surveillance. The heavy reliance on optical images leads to severe performance degradation under adverse illumination conditions such as nighttime and fog. Meanwhile, current Visual Question Answering (VQA) models are limited to elementary perception tasks such as object counting and detection, lacking the domain-specific regulatory knowledge required to assess complex traffic behaviors. To address these limitations, we propose a novel Cross-spectral Traffic Cognition Network (CTCNet) for robust UAV traffic scene understanding. In particular, we design a Prototype-Guided Knowledge Embedding (PGKE) module that leverages high-level semantic prototypes from an external Traffic Regulation Memory (TRM) to anchor domain-specific regulatory knowledge into visual representations, enabling the model to comprehend complex traffic behaviors and distinguish fine-grained violation patterns. Moreover, we develop a Quality-Aware Spectral Compensation (QASC) module that exploits the complementary characteristics of optical and thermal modalities to perform bidirectional context exchange, selectively transferring discriminative features from the reliable modality to compensate for the degraded one for robust representation in complex environments. In addition, we construct Traffic-VQA, the first large-scale optical-thermal infrared (OPT-TIR) benchmark for UAV traffic understanding, comprising 8,180 well-aligned image pairs and 1.3 million question-answer pairs across 31 diverse question types covering both perceptual and cognitive tasks. Extensive experiments demonstrate that CTCNet significantly outperforms state-of-the-art methods, achieving notable improvements in both cognition and all-weather perception scenarios. The dataset is available at https://github.com/YuZhang-2004/UAV-traffic-scene-understanding.
+Traffic scene understanding from Unmanned Aerial Vehicle (UAV) platforms plays a critical role in intelligent transportation systems due to its flexible deployment and wide-area monitoring capabilities. However, existing methods still face significant challenges in real-world traffic surveillance. The heavy reliance on optical images leads to severe performance degradation under adverse illumination conditions such as nighttime and fog. Meanwhile, current Visual Question Answering (VQA) models are limited to elementary perception tasks such as object counting and detection, lacking the domain-specific regulatory knowledge required to assess complex traffic behaviors. To address these limitations, we propose a novel Cross-spectral Traffic Cognition Network (MTCNet) for robust UAV traffic scene understanding. In particular, we design a Prototype-Guided Knowledge Embedding (PGKE) module that leverages high-level semantic prototypes from an external Traffic Regulation Memory (TRM) to anchor domain-specific regulatory knowledge into visual representations, enabling the model to comprehend complex traffic behaviors and distinguish fine-grained violation patterns. Moreover, we develop a Quality-Aware Spectral Compensation (QASC) module that exploits the complementary characteristics of optical and thermal modalities to perform bidirectional context exchange, selectively transferring discriminative features from the reliable modality to compensate for the degraded one for robust representation in complex environments. In addition, we construct Traffic-VQA, the first large-scale optical-thermal infrared (OPT-TIR) benchmark for UAV traffic understanding, comprising 8,180 well-aligned image pairs and 1.3 million question-answer pairs across 31 diverse question types covering both perceptual and cognitive tasks. Extensive experiments demonstrate that MTCNet significantly outperforms state-of-the-art methods, achieving notable improvements in both cognition and all-weather perception scenarios. The dataset is available at https://github.com/YuZhang-2004/UAV-traffic-scene-understanding.
 
 <!-- <img src="Traffic-VQA.png" alt="Illustration of Traffic-VQA" style="zoom:67%;" /> -->
 
@@ -19,15 +19,15 @@ Traffic scene understanding from Unmanned Aerial Vehicle (UAV) platforms plays a
 
 * 🧠 **Cognitive Depth**: Over 1.3 million question-answer pairs spanning 31 distinct question types (including 10 dedicated to complex cognitive reasoning like traffic rule violations).
 
-* 💡 **CTCNet Framework**: Integrates an external Traffic Regulation Memory (TRM) to anchor domain-specific regulatory knowledge into visual representations.
+* 💡 **MTCNet Framework**: Integrates an external Traffic Regulation Memory (TRM) to anchor domain-specific regulatory knowledge into visual representations.
 
 ## 📢 News
 
 *   **[May, 2025]** Traffic-VQA dataset and annotations are now open-sourced on [🤗 Traffic-VQA](https://huggingface.co/datasets/YuYu2004/Traffic-VQA)!
 
-## 🛠️ Methodology: CTCNet
+## 🛠️ Methodology: MTCNet
 
-Our Cross-spectral Traffic Cognition Network (CTCNet) systematically addresses the cognitive and perceptual bottlenecks of general MLLMs primarily focusing on the following two aspects:
+Our Cross-spectral Traffic Cognition Network (MTCNet) systematically addresses the cognitive and perceptual bottlenecks of general MLLMs primarily focusing on the following two aspects:
 
 Prototype-Guided Knowledge Embedding (PGKE): Retrieves high-level semantic prototypes from an offline Traffic Regulation Memory (TRM) to explicitly inject domain-specific traffic rules into the visual feature hierarchy.
 
@@ -54,7 +54,7 @@ Access the full Traffic-VQA dataset from [Hugging Face](https://huggingface.co/d
 
 ## ✔️ Baselines & Evaluation
 
-We evaluated several state-of-the-art multimodal models on Traffic-VQA. CTCNet establishes a new state-of-the-art, especially in complex cognitive tasks such as fine-grained traffic violation detection.
+We evaluated several state-of-the-art multimodal models on Traffic-VQA. MTCNet establishes a new state-of-the-art, especially in complex cognitive tasks such as fine-grained traffic violation detection.
 
 *   [GeoChat](https://huggingface.co/MBZUAI/geochat-7B)
 *   [GeoPix](https://github.com/Norman-Ou/GeoPix)
